@@ -69,8 +69,9 @@ $ opam install hardcaml ppx_deriving_hardcaml hardcaml_waveterm
   board
   
   
-  ## 이하 [blog](https://blog.janestreet.com/zero-knowledge-fpgas-hardcaml/) 내용
-  In 2022 a consortium of companies ran an international competition, called the ZPrize, to advance the state of the art in “zero-knowledge” cryptography. We decided to have a go in our free time at submitting solutions to both the Multi-Scalar Multiplication (MSM) and Number Theoretic Transform (NTT) tracks, using the same open source Hardcaml libraries that Jane Street uses for our own FPGA development. We believe by using Hardcaml we were able to more efficiently and robustly come up with designs in the short competition period. These designs also interact with the standard vendor RTL flow and so we hope they will be useful to others.
+## 이하 [blog](https://blog.janestreet.com/zero-knowledge-fpgas-hardcaml/) 내용
+
+In 2022 a consortium of companies ran an international competition, called the ZPrize, to advance the state of the art in “zero-knowledge” cryptography. We decided to have a go in our free time at submitting solutions to both the Multi-Scalar Multiplication (MSM) and Number Theoretic Transform (NTT) tracks, using the same open source Hardcaml libraries that Jane Street uses for our own FPGA development. We believe by using Hardcaml we were able to more efficiently and robustly come up with designs in the short competition period. These designs also interact with the standard vendor RTL flow and so we hope they will be useful to others.
 
 Our MSM solution, implemented on the BLS12-377 curve, beats all current FPGA state of the art, including the recently released Cyclone MSM and PipeMSM. It’s able to calculate 4 rounds of 226 MSMs 20.331s, an average of 5.083s per MSM, and won first place in the ZPrize MSM track. Our power-area-performance balanced NTT solution took second place in the ZPrize NTT track. Full results are available here.
 
@@ -146,6 +147,7 @@ We experimented with different core counts on a single C1100 Varium card, with r
 |16|0.1238|18.19|126422|156149|512|162|96|
 |32|0.0691|21.13|166488|184436|1028|162|192|
 |64|0.0450|27.70|265523|246385|2052|162|384|
+
 Future work
 Due to time constraints, there were a number of optimizations that we did not have a chance to experiment with. We discuss them at length on the corresponding page of our website.
 
